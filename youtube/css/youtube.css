@@ -1,0 +1,128 @@
+:root{
+    /*color*/
+    --white-color: #FFFFFF;
+    --black-color: #222831;
+    --blue-color:  #5800FF;
+    --red-color:   #FF4848;
+    --grey-dark-color: #0F3D3E;
+    --grey-light-color: #F1F1F1;
+
+    /*size*/
+    --side-padding: 12px;
+    --avartar-size:36px;
+
+    /*font-size*/
+    --font-large:18px;
+    --font-medium:14px;
+    --font-small:12px;
+    --font-micro: 10px;
+
+
+}
+
+* {
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+
+}
+body{
+    font-family: Roboto;
+}
+ul{
+    list-style:none;
+}
+button,
+button:focus{
+    border:none;
+    cursor:pointer;
+    outline: none;
+    background-color: var(--white-color);
+    height: 100%;
+
+}
+.upbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--side-padding);
+    background-color: var(--black-color);
+    color:var(--white-color);
+    font-size: var(--font-large);
+    position: sticky;
+    top:0;
+}
+.upbar .element1 .fa-brands{
+    color:var(--red-color);
+}
+.upbar .element1 a{
+    text-decoration: none;
+    color:white;
+}
+
+.upbar .element2{
+    display:flex;
+
+}
+.upbar .element2 li{
+    list-style: none;
+    padding-right: var(--side-padding);
+}
+.player{
+    text-align: center;
+    background-color: var(--black-color);
+
+}
+
+.player video{
+    width:100%;
+    height: 100%;
+    max-width: 1000px;
+
+}
+.info{
+    padding: var(--side-padding);
+}
+.info .metadata .hashtags{
+    display:flex;
+    font-size: var(--font-small);
+
+
+
+}
+.info .metadata .hashtags li{
+    list-style: none;
+    padding-right: var(--side-padding);
+    color: var(--blue-color);
+}
+.info .titleAndButton{
+    display:flex;
+}
+.info .titleAndButton .title{
+    font-size: var(--font-medium);
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+
+    margin-right: var(--side-padding);
+}
+
+.views{
+    font-size: var(--font-small);
+    color: var(--grey-dark-color);
+}
+
+.actions{
+    font-size: var(--font-large);
+    display: flex;
+
+}
+.actions li{
+
+    padding-right: var(--side-padding);
+}
+.actions button{
+    display:flex;
+    flex-direction: column;
+}

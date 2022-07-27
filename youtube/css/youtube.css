@@ -27,7 +27,7 @@
 
 }
 body{
-    font-family: Roboto;
+    font-family: "Roboto Light";
 }
 ul{
     list-style:none;
@@ -68,7 +68,12 @@ button:focus{
     list-style: none;
     padding-right: var(--side-padding);
 }
+.relative {
+    position: relative;
+    z-index:-1;
+}
 .player{
+
     text-align: center;
     background-color: var(--black-color);
 
@@ -114,8 +119,11 @@ button:focus{
 }
 
 .actions{
-    font-size: var(--font-large);
+
     display: flex;
+    justify-content: space-around;
+    padding: var(--side-padding) 0;
+
 
 }
 .actions li{
@@ -125,4 +133,47 @@ button:focus{
 .actions button{
     display:flex;
     flex-direction: column;
+    font-size: var(--font-small);
+}
+.actions button i{
+    margin: 0 auto;
+    margin-bottom: calc(var(--side-padding));
+    font-size: 16px;
+
+}
+.actions button i.active{
+    color:var(--blue-color);
+}
+.channel{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--grey-light-color);
+    border-bottom: 1px solid var(--grey-light-color);
+}
+.info .channel .metadata{
+    display:flex;
+    align-items: center;
+
+}
+.info .channel .metadata .info{
+    display: flex;
+    flex-direction: column;
+}
+.info .channel .metadata img{
+    width: var(--avartar-size);
+    height: var(--avartar-size);
+    border-radius: 50%;
+}
+.channel .metadata .info .name{
+    font-size: var(--font-medium);
+}
+.channel .metadata .info .subscriber{
+    font-size: var(--font-small);
+    color: var(--grey-dark-color);
+}
+.channel .subscribe{
+    font-size: var(--font-medium);
+    color: var(--red-color);
+    text-transform: uppercase;
 }
